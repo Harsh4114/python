@@ -1,5 +1,29 @@
 import random
 
+
+def ans():
+    random_number1 = random.randint(0, 4)
+
+    # Print each random number separately
+    print("Random Number 1:", random_number1)
+
+    print("\n")
+    ans = random_number1 % 4
+    print(ans)
+
+    if ans == 0:
+        addition()
+
+    if ans == 1:
+        multiplication()
+
+    if ans == 2:
+        division()
+
+    if ans == 3:
+        subtraction()
+
+
 def subtraction():
     random_number8 = random.randint(600, 700)
     random_number9 = random.randint(700, 800)
@@ -17,27 +41,7 @@ def subtraction():
     if sub != usersub:
         exit("Sorry, try next time")
     else:
-
-        random_number1 = random.randint(0, 4)
-
-        # Print each random number separately
-        print("Random Number 1:", random_number1)
-
-        print("\n")
-        ans = random_number1 % 4
-        print(ans)
-
-        if ans == 0:
-            addition()
-
-        if ans == 1:
-            multiplication()
-
-        if ans == 2:
-            division()
-
-        if ans == 3:
-            subtraction()
+        ans()
 
 
 def addition():
@@ -58,28 +62,7 @@ def addition():
     if sum_result != usersum:
         exit("Sorry, try next time")
     else:
-
-        random_number1 = random.randint(0, 4)
-
-        # Print each random number separately
-        print("Random Number 1:", random_number1)
-
-        print("\n")
-        ans = random_number1 % 4
-        print(ans)
-
-        if ans == 0:
-            addition()
-
-        if ans == 1:
-            multiplication()
-
-        if ans == 2:
-            division()
-
-        if ans == 3:
-            subtraction()
-
+        ans()
 
 def multiplication():
     random_number4 = random.randint(200, 300)
@@ -97,27 +80,7 @@ def multiplication():
     if multi != usermulti:
         exit("Sorry, try next time")
     else:
-
-        random_number1 = random.randint(0, 4)
-
-        # Print each random number separately
-        print("Random Number 1:", random_number1)
-
-        print("\n")
-        ans = random_number1 % 4
-        print(ans)
-
-        if ans == 0:
-            addition()
-
-        if ans == 1:
-            multiplication()
-
-        if ans == 2:
-            division()
-
-        if ans == 3:
-            subtraction()
+        ans()
 
 
 def division():
@@ -137,29 +100,8 @@ def division():
     if div != userdiv:
         exit("Sorry, try next time")
     else:
-
-        random_number1 = random.randint(0, 4)
-
-        # Print each random number separately
-        print("Random Number 1:", random_number1)
-
-        print("\n")
-        ans = random_number1 % 4
-        print(ans)
-
-        if ans == 0:
-            addition()
-
-        if ans == 1:
-            multiplication()
-
-        if ans == 2:
-            division()
-
-        if ans == 3:
-            subtraction()
+        ans()
 
 
 # main Body
-
-addition()
+ans()
