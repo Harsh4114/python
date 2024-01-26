@@ -1,98 +1,165 @@
 import random
 
-# this code make for generate number of times number according given input
-# comment 
-'''
-1. main body generate two random number and , call is function 
-2 . call function print value of A and B 
-3. que print on screen add , multi , sub 
-4 . according answer next que print 
-5. if answer right move on next otherwise over game 
+def subtraction():
+    random_number8 = random.randint(600, 700)
+    random_number9 = random.randint(700, 800)
+    print("Random Number 8:", random_number8)
 
-'''
-#comment end
-# function 
+    print("Random Number 9:", random_number9)
 
-def call(a,b):
-  
-  print ( f" \n The value of A is {a} \n \n The value of B is {b} \n")
-  print("\n_____________________________________\n")
-  fun(a,b)
+    print("\n")
+    sub = random_number8 - random_number9
+    print("This subtraction: ", sub)
 
-def fun( a,b ): 
-  for i in range(1):
-   print ( '\nWrite addition of A and B\n ')
-   sum = int ( input ( " ANSWER = "))
-   if ( sum == a+b):
-     i = i+1 
-     print("\n_____________________________________\n")
-     print ('\nNext Question - On Your Screen\n')
-     print("\n_____________________________________\n")
-     fun2(a,b)
-   else :
-     print ('\nSorry , Bye-Bye\n')
-     stop()
+    print(f"What is the subtraction of {random_number8} and {random_number9}?")
+    usersub = int(input("Ans: "))
 
-def fun2(a,b):
-  print('\nWrite multipication of A and B\n ')
-  multi = int ( input ( " ANSWER = "))
-  for _i in range(1):
-    if ( multi == a*b):
-       print("\n_____________________________________\n")
-       print ('\nNext Question - On Your Screen\n')
-       print("\n_____________________________________\n")
-       fun3(a,b)
-    else : 
-      print ('\nSorry , Bye-Bye\n')
-      stop()
+    if sub != usersub:
+        exit("Sorry, try next time")
+    else:
 
-def fun3(a,b): 
-  print ( '\nWrite sub of A and B \n')
-  sub =int ( input ( " ANSWER = "))
-  for _i in range(1):
-    if ( sub == a-b):
-     print("\n_____________________________________\n")
-     print ('\nNext Question - On Your Screen\n')
-     print("\n_____________________________________\n")
-     fun4()
-    else : 
-     print ('\nSorry , Bye-Bye\n')
-     stop()
-      
-def fun4():
-  for _i in range(1,):
-    a = random.randint(1, 100)
-    b = random.randint(1, 100)
-    print ( f" \n A is {a} \n and \n B is {b} \n ")
-    fun(a,b)
+        random_number1 = random.randint(0, 4)
 
-def stop():
-   for _i in range(1):
-     break
-    
-#function end 
-# impoort 
+        # Print each random number separately
+        print("Random Number 1:", random_number1)
+
+        print("\n")
+        ans = random_number1 % 4
+        print(ans)
+
+        if ans == 0:
+            addition()
+
+        if ans == 1:
+            multiplication()
+
+        if ans == 2:
+            division()
+
+        if ans == 3:
+            subtraction()
 
 
-# import end 
+def addition():
+    random_number2 = random.randint(1, 100)
+    random_number3 = random.randint(100, 200)
 
-#mian body 
-a =   random.randint(1, 100) 
-b =   random.randint(1, 100)
+    print("Random Number 2:", random_number2)
+    print("Random Number 3:", random_number3)
 
-print("---------------\nEnter 1 or 0\n---------------")
-print ( "\nstart - 1\nExit  - 0\n")
+    print("\n")
 
-i = int ( input( " Your Answer For game -"))
+    sum_result = random_number2 + random_number3
+    print("This sum: ", sum_result)
 
-if ( i == 1): 
-  print("\n_____________________________________\n")
-  print("\n             Game start              \n")
-  print("\n_____________________________________\n")
-  call(a,b)
-else :
-  print("\n_____________________________________\n")
-  print("\n             Game over               \n")
-  print("\n_____________________________________\n")
-  stop()
-  
+    print(f"What is the addition of {random_number2} and {random_number3}?")
+    usersum = int(input("Ans: "))
+
+    if sum_result != usersum:
+        exit("Sorry, try next time")
+    else:
+
+        random_number1 = random.randint(0, 4)
+
+        # Print each random number separately
+        print("Random Number 1:", random_number1)
+
+        print("\n")
+        ans = random_number1 % 4
+        print(ans)
+
+        if ans == 0:
+            addition()
+
+        if ans == 1:
+            multiplication()
+
+        if ans == 2:
+            division()
+
+        if ans == 3:
+            subtraction()
+
+
+def multiplication():
+    random_number4 = random.randint(200, 300)
+    random_number5 = random.randint(300, 400)
+
+    print("Random Number 4:", random_number4)
+    print("Random Number 5:", random_number5)
+
+    print("\n")
+    multi = random_number4 * random_number5
+    print("This multiplication: ", multi)
+
+    print(f"What is the multiplication of {random_number4} and {random_number5}?")
+    usermulti = int(input("Ans: "))
+    if multi != usermulti:
+        exit("Sorry, try next time")
+    else:
+
+        random_number1 = random.randint(0, 4)
+
+        # Print each random number separately
+        print("Random Number 1:", random_number1)
+
+        print("\n")
+        ans = random_number1 % 4
+        print(ans)
+
+        if ans == 0:
+            addition()
+
+        if ans == 1:
+            multiplication()
+
+        if ans == 2:
+            division()
+
+        if ans == 3:
+            subtraction()
+
+
+def division():
+    print("\n")
+    random_number6 = random.randint(400, 500)
+    random_number7 = random.randint(500, 600)
+
+
+    print("Random Number 6:", random_number6)
+    print("Random Number 7:", random_number7)
+
+    div = random_number6 / random_number7
+    print("This division: ", div)
+
+    print(f"What is the division of {random_number6} and {random_number7}?")
+    userdiv = float(input("Ans: "))
+    if div != userdiv:
+        exit("Sorry, try next time")
+    else:
+
+        random_number1 = random.randint(0, 4)
+
+        # Print each random number separately
+        print("Random Number 1:", random_number1)
+
+        print("\n")
+        ans = random_number1 % 4
+        print(ans)
+
+        if ans == 0:
+            addition()
+
+        if ans == 1:
+            multiplication()
+
+        if ans == 2:
+            division()
+
+        if ans == 3:
+            subtraction()
+
+
+# main Body
+
+addition()
