@@ -1,8 +1,11 @@
 import random
 
+point = 0
 
 def ans():
+    global point  # Declare point as a global variable
     random_number1 = random.randint(0, 4)
+    print(f"{point}")
 
     # Print each random number separately
     print("Random Number 1:", random_number1)
@@ -23,8 +26,8 @@ def ans():
     if ans == 3:
         subtraction()
 
-
 def subtraction():
+    global point  # Declare point as a global variable
     random_number8 = random.randint(600, 700)
     random_number9 = random.randint(700, 800)
     print("Random Number 8:", random_number8)
@@ -39,12 +42,16 @@ def subtraction():
     usersub = int(input("Ans: "))
 
     if sub != usersub:
+        print(f" Your Point is {point} ")
         exit("Sorry, try next time")
+
     else:
+        point = point + 1
+        print(f" Your Current Point is {point} ")
         ans()
 
-
 def addition():
+    global point  # Declare point as a global variable
     random_number2 = random.randint(1, 100)
     random_number3 = random.randint(100, 200)
 
@@ -60,11 +67,15 @@ def addition():
     usersum = int(input("Ans: "))
 
     if sum_result != usersum:
+        print(f" Your Point is {point} ")
         exit("Sorry, try next time")
     else:
+        point = point + 1
+        print(f" Your Current Point is {point} ")
         ans()
 
 def multiplication():
+    global point  # Declare point as a global variable
     random_number4 = random.randint(200, 300)
     random_number5 = random.randint(300, 400)
 
@@ -78,16 +89,18 @@ def multiplication():
     print(f"What is the multiplication of {random_number4} and {random_number5}?")
     usermulti = int(input("Ans: "))
     if multi != usermulti:
+        print(f" Your Point is {point} ")
         exit("Sorry, try next time")
     else:
+        point = point + 1
+        print(f" Your Current Point is {point} ")
         ans()
 
-
 def division():
+    global point  # Declare point as a global variable
     print("\n")
     random_number6 = random.randint(400, 500)
     random_number7 = random.randint(500, 600)
-
 
     print("Random Number 6:", random_number6)
     print("Random Number 7:", random_number7)
@@ -98,10 +111,14 @@ def division():
     print(f"What is the division of {random_number6} and {random_number7}?")
     userdiv = float(input("Ans: "))
     if div != userdiv:
+        print(f" Your Point is {point} ")
         exit("Sorry, try next time")
     else:
+        point = point + 1
+        print(f" Your Current Point is {point} ")
         ans()
 
-
 # main Body
+# print (f" Your Current Point is {point} ")
+print(" Your Current Point is Zero")
 ans()
